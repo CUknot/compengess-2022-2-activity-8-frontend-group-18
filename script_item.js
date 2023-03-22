@@ -1,3 +1,5 @@
+const { getItems } = require("../compengess-activity-8-backend-starter/controller/itemsController");
+
 // TODO #4.0: Change this IP address to EC2 instance public IP address when you are going to deploy this web application
 const backendIPAddress = "127.0.0.1:3000";
 
@@ -5,7 +7,7 @@ let itemsData;
 
 // TODO #2.1: Edit group number
 const getGroupNumber = () => {
-  return 99;
+  return 18;
 };
 
 // TODO #2.2: Show group members
@@ -28,7 +30,8 @@ const showGroupMembers = async () => {
           <li>${member.full_name}</li>
           `;
         // ----------------- FILL IN YOUR CODE UNDER THIS AREA ONLY ----------------- //
-        member_dropdown.innerHTML += ``;
+        member_dropdown.innerHTML += `
+        <option>${member.full_name}</option>`;
         // ----------------- FILL IN YOUR CODE ABOVE THIS AREA ONLY ----------------- //
       });
     })
